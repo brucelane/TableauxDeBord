@@ -1,0 +1,44 @@
+﻿        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+            -ms-touch-action: none;
+        }
+
+.workInProgress {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr;
+    z-index: 4;
+    background-color: #2A3548;
+}
+
+.hidden {
+    display: none;
+}
+
+.workInProgress .progressContainer {
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+    opacity: 1.0;
+    transform: scale(4.0);
+}
+
+#fpsCounter {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

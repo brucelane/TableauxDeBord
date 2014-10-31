@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>settingsFlyout</title>
+
+    <!-- WinJS references -->
+    <link rel="stylesheet" href="//Microsoft.WinJS.2.0/css/ui-dark.css" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link rel="stylesheet" href="/css/default.css">
+</head>
+<body>
+    <!-- Settings charm content -->
+    <div class="win-settingsflyout settingsDiv" id="settingsDiv" data-win-control="WinJS.UI.SettingsFlyout">
+        <div class="win-header">
+            <button class="win-backbutton" aria-label="Back" onclick="GameManager.showPreferences()"></button>
+            <span class="win-label">Game options</span>
+        </div>
+        <div class="win-content">
+            <div class="win-settings-section">
+                <p>
+                    <label>Camera type</label>
+                    <input type="radio" name="settingCameraType" value="0" onchange="GameManager.switchCamera(0)" checked /> Keyboard & mouse<br />
+                    <input type="radio" name="settingCameraType" value="1" onchange="GameManager.switchCamera(1)" /> Touch<br />
+                    <input type="radio" name="settingCameraType" value="3" onchange="GameManager.switchCamera(2)" /> Device Orientation<br />
+                </p>
+                <p>
+                    <label>Rendering type</label>
+                    <input type="radio" name="renderingType" value="0" onchange="GameManager.switchToNormalRendering()" checked /> Normal<br />
+                    <input type="radio" name="renderingType" value="1" onchange="GameManager.switchToBWRendering()" /> Black & White<br />
+                    <input type="radio" name="renderingType" value="2" onchange="GameManager.switchToSepiaRendering()" /> Sepia<br />
+                </p>
+                <p>
+                    <label>Anti-aliasing</label>
+                    <input type="radio" name="AAType" value="0" onchange="GameManager.switchAA(0)" checked /> None<br />
+                    <input type="radio" name="AAType" value="1" onchange="GameManager.switchAA(1)" /> FXAA<br />
+                    <input type="radio" name="AAType" value="2" onchange="GameManager.switchAA(2)" /> FSAA 4X<br />
+                </p>
+                <p>
+                    <label>Hardware scaling</label>
+                    <input type="radio" name="hardwareScalingType" value="0" onchange="GameManager.switchHardwareScaling(0)" checked /> Automatic<br />
+                    <input type="radio" name="hardwareScalingType" value="1" onchange="GameManager.switchHardwareScaling(1)" /> 1<br />
+                    <input type="radio" name="hardwareScalingType" value="2" onchange="GameManager.switchHardwareScaling(2)" /> 2<br />
+                    <input type="radio" name="hardwareScalingType" value="4" onchange="GameManager.switchHardwareScaling(4)" /> 4<br />
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
